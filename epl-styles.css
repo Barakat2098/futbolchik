@@ -1,0 +1,383 @@
+/* Сброс всех отступов и стандартных стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Основной контейнер с изображением */
+.hide {
+    height: 100vh;
+    background-color: black;
+}
+
+/* Контейнер с изображением и прозрачностью через псевдоэлемент */
+.hide-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Выравнивание текста по нижнему краю */
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Псевдоэлемент для изображения с прозрачностью */
+.hide-img::before {
+    content: '';
+    background: url("img/champion-city.jpg") no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6; /* Прозрачность только для изображения */
+    z-index: 1; /* Слой ниже текста */
+}
+
+/* Текст поверх изображения */
+.hide-zagal {
+    display: flex;
+    position: relative;
+    z-index: 2; /* Текст выше изображения */
+    padding-right: 90px; /* Отступ справа */
+}
+
+/* Стили для текста */
+.hide-zagal h1 {
+    font-size: 100px;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right; /* Выровняли текст по правому краю */
+}
+
+
+/* Slider */
+.slider-main {
+    background: linear-gradient(#354762, #E2E2E2);
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    height: 700px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* CLUPS */
+
+.clup {
+    background-color: #E2E2E2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clup-txt h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.clup-block {
+    display: flex;
+    gap: 20px; /* Отступы между блоками */
+    flex-wrap: wrap; /* Перенос на новую строку */
+    justify-content: center; /* Центрируем блоки */
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block-img img {
+    width: 350px;
+    height: 350px;
+}
+
+.block-txt p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* TABLE */
+.table-img {
+    background: linear-gradient(#E2E2E2 70%, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 850px;
+}
+
+.table-img img {
+    margin-top: 20px;
+}
+
+/* MATCHES */
+.matchs-img {
+    background: linear-gradient(#E2E2E2 70%, #E2E2E2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+}
+
+.matchs-img img {
+    margin-top: 20px;
+}
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-block {
+    width: 90%; /* Ограничиваем ширину, чтобы оставить отступы по краям */
+    display: flex;
+    justify-content: space-between; /* Разделяем на три части: слева, центр, справа */
+    align-items: center;
+}
+
+.football-name {
+    flex: 1; /* Слева */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.copyright {
+    flex: 1; /* По центру */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    flex: 1; /* Справа */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-txt p {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 10px; /* Отступы между иконками */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Увеличение иконки на 10% при наведении */
+}
+
+
+
+/* CLUPS */
+
+ /* Адаптивные стили для экранов до 480px (мобильные устройства) */
+@media (max-width: 391px) {
+    .block-img img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .block-txt p {
+        font-size: 18px;
+    }
+
+    .clup-txt h1 {
+        font-size: 28px;
+    }
+
+    .clup-block {
+        flex-direction: column; /* Ставим блоки вертикально для мобильных */
+        gap: 10px;
+    }
+}
+
+
+/*   */
+
+/* Адаптивка под мобильные устройства */
+@media screen and (max-width: 391px) {
+    .slider-container {
+        height: 400px; /* Уменьшим высоту слайдера на мобилках */
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 10px; /* Сделаем кнопки поменьше */
+    }
+
+    .slider-container {
+        position: relative;
+        max-width: 1000px;
+        margin: auto;
+        height: 300px;
+    }
+
+}
+
+/*      */
+
+/* Адаптивка для мобильных устройств */
+@media screen and (max-width: 391px) {
+    .clup-txt h1 {
+        font-size: 30px; /* Уменьшаем заголовок */
+        margin-bottom: 30px; /* Уменьшаем отступы */
+    }
+
+    .block-img img {
+        width: 250px; /* Уменьшаем размеры изображений */
+        height: 250px; /* Уменьшаем высоту изображений */
+    }
+
+    .block-txt p {
+        font-size: 20px; /* Уменьшаем размер текста */
+    }
+
+    .table-img, .matchs-img {
+        height: auto; /* Автоматическая высота на мобильных устройствах */
+    }
+
+    .table-img img, .matchs-img img {
+        width: 90%; /* Ширина изображений на мобильных устройствах */
+    }
+}
+
+/* Адаптивка для совсем маленьких экранов */
+@media screen and (max-width: 391px) {
+    .clup-txt h1 {
+        font-size: 24px; /* Еще меньше заголовок */
+    }
+
+    .block-img img {
+        width: 200px; /* Еще меньше изображения */
+        height: 200px; /* Еще меньше высота изображения */
+    }
+
+    .block-txt p {
+        font-size: 18px; /* Уменьшаем текст для маленьких экранов */
+    }
+
+    .table-img img, .matchs-img img {
+        width: 95%; /* Ширина изображений почти на весь экран */
+    }
+}
+
+/*       */
+
+@media screen and (max-width: 391px) {
+    .hide-zagal h1 {
+        font-size: 80px; /* Увеличиваем размер текста на планшетах */
+        padding-right: 40px; /* Уменьшаем отступ справа */
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .hide-zagal h1 {
+        font-size: 40px; /* Увеличиваем размер текста на мобильных */
+        padding-right: 20px; /* Уменьшаем отступ справа */
+        text-align: center; /* Центрируем текст на мобильных */
+    }
+}

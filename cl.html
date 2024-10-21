@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Футбольчик - о Лиге Чемпионов</title>
+    <link rel="icon" href="img/tiktok.png" type="image/png">
+    <link rel="stylesheet" href="cl-style.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-img">
+            <img src="img/noroot.png" alt="">
+        </div>
+    </div>
+    <div class="matches-container">
+        <h1>Ближайшие матчи:</h1>
+        <div class="matches">
+            <div class="match-card">
+                <img src="img/WhatsApp_Iage_2024-.jpeg" alt="Ювентус - ПСВ">
+                <p>Ювентус (Ит.) - ПСВ (Нид.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/Whatsage_2024-.jpeg" alt="Янг Бойз - Астон Вилла">
+                <p>Янг Бойз (Швейц.) - Астон Вилла (Анг.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/WhatsApp_Imag24-.jpeg" alt="Бавария - Динамо Загреб">
+                <p>Бавария (Гер.) - Динамо Загреб (Хор.)</p>
+                <span>18.09.2024</span>
+                <span>00:00</span>
+            </div>
+        </div> <br>
+        <div class="matches">
+            <div class="match-card">
+                <img src="img/city.jpeg" alt="Ювентус - ПСВ">
+                <p>Ювентус (Ит.) - ПСВ (Нид.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/milan.jpeg" alt="Янг Бойз - Астон Вилла">
+                <p>Янг Бойз (Швейц.) - Астон Вилла (Анг.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/lille.jpeg" alt="Бавария - Динамо Загреб">
+                <p>Бавария (Гер.) - Динамо Загреб (Хор.)</p>
+                <span>18.09.2024</span>
+                <span>00:00</span>
+            </div>
+        </div> <br>
+        <div class="matches">
+            <div class="match-card">
+                <img src="img/shaktar.jpeg" alt="Ювентус - ПСВ">
+                <p>Ювентус (Ит.) - ПСВ (Нид.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/redbull.jpeg" alt="Янг Бойз - Астон Вилла">
+                <p>Янг Бойз (Швейц.) - Астон Вилла (Анг.)</p>
+                <span>17.09.2024</span>
+                <span>21:45</span>
+            </div>
+            <div class="match-card">
+                <img src="img/inter.jpeg" alt="Бавария - Динамо Загреб">
+                <p>Бавария (Гер.) - Динамо Загреб (Хор.)</p>
+                <span>18.09.2024</span>
+                <span>00:00</span>
+            </div>
+        </div>
+    </div>
+    <div class="adidas">
+        <div class="adidas-txt">
+            <p>Бренд ADIDAS разработал специальные <br>
+                комплекты для клубов-партнеров на главный <br>
+                еврокубковый турнир, благодаря <br> 
+                сотрудничеству с UEFA.</p>
+        </div>
+        <div class="adidas-img">
+            <img src="img/biabs.jpeg" alt="">
+        </div>
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <!-- Первый слайд -->
+                <div class="slide active">
+                    <img src="img/arsenal.png" alt="Ювентус форма">
+                    <div class="text">
+                        <hr>
+                        <h2>Еврокубковый комплект формы от ADIDAS для футбольного клуба Арсенал</h2>
+                    </div>
+                </div>
+                <!-- Второй слайд -->
+                <div class="slide">
+                    <img src="img/bayer.png" alt="Барселона форма">
+                    <div class="text">
+                        <hr>
+                        <h2>Еврокубковый комплект формы от ADIDAS для футбольного клуба Бавария</h2>
+                    </div>
+                </div>
+                <!-- Третий слайд -->
+                <div class="slide">
+                    <img src="img/juven.png" alt="Бавария форма">
+                    <div class="text">
+                        <hr>
+                        <h2>Еврокубковый комплект формы от ADIDAS для футбольного клуба Ювентус</h2>
+                    </div>
+                </div>
+                <!-- Четвертый слайд -->
+                <div class="slide">
+                    <img src="img/real.png" alt="Ливерпуль форма">
+                    <div class="text">
+                        <hr>
+                        <h2>Еврокубковый комплект формы от ADIDAS для футбольного клуба Реал Мадрид</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Кнопки для навигации -->
+            <div class="navigation">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <!-- Навигационные точки -->
+            <div class="dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+    <div class="container-2">
+        <div class="center">
+            <a href="main.html">
+                <button class="btn">
+                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                </svg>
+                <span>на главную страницу</span>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-block">
+            <div class="footer-txt football-name">
+                <p>Футбольчик</p>
+            </div>
+            <div class="footer-txt copyright">
+                <p>© All rights reserved</p>
+            </div>
+            <div class="footer-social">
+                <img src="img/instagram.png" alt="Instagram">
+                <img src="img/tiktok.png" alt="TikTok">
+                <img src="img/youtube.png" alt="YouTube">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
