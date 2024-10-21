@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+.hide {
+    height: 100vh; /* Высота на весь экран */
+    background-color: black;
+}
+
+.hide-img {
+    background: url("large.jpg") no-repeat center center;
+    background-size: cover; /* Картинка будет адаптироваться под размер экрана */
+    width: 100%;
+    height: 100%;
+    position: relative; /* Относительное позиционирование для абсолютных слоев */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hide-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5; /* Прозрачность на 50% */
+    z-index: 1; /* Этот слой будет позади текста */
+}
+
+.hide-zagal {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2; /* Текст будет над полупрозрачным слоем */
+    text-align: center;
+}
+
+.hide-zagal h1 {
+    font-size: 58px;
+    margin-bottom: 30px;
+}
+
+.hide-zagal h2 {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.hide-btn {
+    z-index: 2; /* Кнопка тоже над прозрачным слоем */
+}
+
+.hide-btn button {
+    width: 300px;
+    height: 50px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hide-btn button:hover {
+    background-color: #ff4500; /* Темнее при наведении */
+}
+
+/* Liga Championov */
+
+.lc{
+    width: 100%;
+    height: auto;
+    background-color: #DFDFDF;
+}
+.lc-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.lc-txt h2{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.lc-txt p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 750px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* GAAAAAAAAAAME */
+
+.game{
+    background: linear-gradient(#DFDFDF, #FFFFFF);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-zagal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-zagal h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.game-zagal h3{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.game-matchi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-matchi h3{
+    margin-bottom: 10px;
+}
+.game-matchi p{
+    font-weight: 200;
+}
+
+/* CHAMPION */
+.champ {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.champ-zagal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.champ-zagal h2 {
+    font-weight: 200;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.champ-zagal h1 {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.champ-block {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.champ-block button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.champ-block button:hover {
+    color: #fff;
+    border-radius: 20px;
+    background-color: rgba(240, 248, 255, 0.8); /* Полупрозрачный фон при наведении */
+    transform: scale(1.1); 
+}
+
+.champ-block img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.champ-epl, .champ-laliga, .champ-serie, .champ-lc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-block {
+    width: 90%; /* Ограничиваем ширину, чтобы оставить отступы по краям */
+    display: flex;
+    justify-content: space-between; /* Разделяем на три части: слева, центр, справа */
+    align-items: center;
+}
+
+.football-name {
+    flex: 1; /* Слева */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.copyright {
+    flex: 1; /* По центру */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    flex: 1; /* Справа */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-txt p {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.footer-social img {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 10px; /* Отступы между иконками */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Увеличение иконки на 10% при наведении */
+}
+
+
+/* adaptivka */
+@media only screen and (max-width: 391px) {
+    .lc-txt h2{
+        margin-left: 10px;
+    }
+    .lc-txt p{
+        width: 330px;
+        margin-bottom: 50px;
+        text-align: justify;
+    }
+}
+
+/* Адаптивка */
+@media only screen and (max-width: 391px) {
+    .champ-block {
+        display: flex;
+        flex-direction: column; /* Вертикальное выравнивание для мобильных */
+        margin-bottom: 50px;
+    }
+    
+    .champ-block img {
+        width: 80%; /* Адаптируем ширину изображений */
+        height: auto; /* Высота автоматически пропорциональна */
+    }
+
+    .champ-block button {
+        width: 100%; /* Кнопки занимают всю ширину */
+    }
+
+    .champ-zagal h1 {
+        font-size: 50px; /* Уменьшаем размер заголовка */
+    }
+
+    .champ-zagal h2 {
+        font-size: 20px; /* Уменьшаем размер подзаголовка */
+    }
+    .champ-block p{
+        font-size: 20px;
+    }
+}
